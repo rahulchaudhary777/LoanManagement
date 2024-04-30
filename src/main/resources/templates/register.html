@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+<section class="h-100 mt-5">
+    <div class="container" >
+        <div class="row d-flex justify-content-center align-items-center h-100" >
+            <div class="col-md-8" >
+<!--                alert message-->
+<!--                <div th:if="${#fields.hasErrors('name')}" class="alert alert-danger">-->
+<!--                    <ul>-->
+<!--                        <li th:each="error : ${#fields.errors('name')}" th:text="${error}">Error</li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+
+                <div class="alert alert-warning alert-dismissible fade show" role="alert" th:if="${message != null}">
+                    <span th:text="${message}"></span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="card card-registration my-6">
+                    <div class="card-body p-md-5 text-black" style="background-color:#CEC5FA;">
+                        <h3 class="mb-3 text-uppercase text-center">User registration form</h3>
+
+                        <form th:action="@{/register}" method="post" >
+                            <div data-mdb-input-init class="form-outline mb-4">
+<!--                                <label class="form-label " for="naam">Name</label>-->
+                                <input type="text" name="name" id="naam" class="form-control input-sm"
+                                       placeholder="Enter your name" required />
+                            </div>
+                            <div data-mdb-input-init class="form-outline mb-4">
+                                <!--                                <label class="form-label" for="form3Example90">Pincode</label>-->
+                                <input type="email" name="email" id="form3Example90" class="form-control input-sm"
+                                       placeholder="Enter your email" required />
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-md-6 mb-2">
+                                    <div data-mdb-input-init class="form-outline">
+<!--                                        <label class="form-label" for="form3Example1n1">Password</label>-->
+                                        <input type="password" name="password" id="form3Example1n1" class="form-control input-sm"
+                                               placeholder="Enter your password" required
+                                        />
+<!--                                        <div class="invalid-feedback" th:each="e : ${#fields.errors('password')}" th:text="${e}"></div>-->
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <div data-mdb-input-init class="form-outline">
+                                        <!--                                        <label class="form-label" for="form3Example1m1">Email</label>-->
+                                        <input type="number" name="cibilScore" id="form3Example1m1" class="form-control input-sm" placeholder="Enter your Cibil Score"  />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-md-flex justify-content-start align-items-center mb-2 py-2">
+                                <h6 class="mb-0 me-4">Role: </h6>
+
+                                <div class="form-check form-check-inline mb-0 me-4">
+                                    <input type="radio" name="role" value="USER" checked="checked"
+                                           id="user" th:onclick="toggleAdminOptions(false)">
+                                    <label class="form-check-label" for="user">User</label>
+                                </div>
+
+                                <div class="form-check form-check-inline mb-0 me-4">
+                                    <input type="radio" name="role" value="ADMIN"
+                                           id="admin" th:onclick="toggleAdminOptions(true)">
+                                    <label class="form-check-label" for="admin">Admin</label>
+                                </div>
+
+
+                                <div id="adminOptions" style="display: none;">
+                                    <label for="adminType">Select Agent Department:</label>
+                                    <select id="adminType" name="department">
+                                        <option value="Home">Home Loan</option>
+                                        <option value="Car">Car Loan</option>
+                                        <option value="Education">Education Loan</option>
+                                        <option value="Furniture">Furniture Loan</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center ">
+                                <button type="reset" data-mdb-button-init data-mdb-ripple-init class="btn btn-light ">Reset all</button>
+                                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning ms-2">Register</button>
+                            </div>
+                        </form>
+                        <p class="text-center">Already have an account <a th:href="@{/login}">Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

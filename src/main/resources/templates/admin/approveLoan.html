@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert" th:if="${message != null}">
+        <span th:text="${message}"></span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Loan Type</th>
+            <th scope="col">Amount(&#x20B9;)</th>
+            <th scope="col">Duration(Months)</th>
+            <th scope="col">Cibil Score</th>
+            <th scope="col">Status</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="loan, i : ${loans}">
+            <th scope="row" th:text="${i.count}"></th>
+            <td th:text="${loan.type}"></td>
+            <td th:text="${loan.amount}"></td>
+            <td th:text="${loan.duration}"></td>
+            <td th:text="${loan.empId.getCibilScore()}"></td>
+            <td class="text-warning" th:if="${loan.status == 'Pending'}" th:text="${loan.status}"></td>
+            <td class="text-success" th:unless="${loan.status == 'Pending'}" th:text="${loan.status}"></td>
+            <td>
+                <!-- Update & delete Button and Link -->
+                <span th:if="${loan.status != 'Pending'}">
+                    <button type="button" class="btn btn-success" disabled="disabled">Approve</button>
+<!--                    <button type="button" class="btn btn-primary" disabled="disabled">Update</button>-->
+                    <button type="button" class="btn btn-warning" disabled="disabled">Delete</button>
+                </span>
+                <span th:unless="${loan.status != 'Pending'}">
+                    <a th:href="@{/admin/approve(loanId=${loan.loanId})}">
+                        <button type="button" class="btn btn-success">Approve</button>
+                    </a>
+<!--                    <a th:href="@{/admin/update-loan(loanId=${loan.loanId})}">-->
+<!--                        <button type="button" class="btn btn-primary">Update</button>-->
+<!--                    </a>-->
+                    <a th:href="@{/admin/delete-loan(loanId=${loan.loanId})}">
+                        <button type="button" class="btn btn-warning">Reject</button>
+                    </a>
+                    </span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</section>
+</body>
+</html>

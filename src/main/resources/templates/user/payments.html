@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert" th:if="${message != null}">
+        <span th:text="${message}"></span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Payment Type</th>
+            <th scope="col">Amount(&#x20B9;)</th>
+            <th scope="col">Status</th>
+            <th scope="col">payment Date</th>
+            <th scope="col">Sender/Receiver</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="data, i : ${payments}">
+            <th scope="row" th:text="${i.count}"></th>
+            <td th:text="${data.payment.paymentType}"></td>
+            <td th:text="${data.payment.amount}"></td>
+            <td th:class="${data.payment.status == 'Pending'} ? 'text-warning' : (${data.payment.status == 'Credited'} ? 'text-success' : 'text-danger')"
+                th:text="${data.payment.status}">
+            </td>
+            <td th:if="${data.payment.date != null}" th:text="${#dates.format(data.payment.date, 'yyyy-MM-dd')}"></td>
+            <td th:unless="${data.payment.date != null}">Not Yet</td>
+            <td th:text="${data.email}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</section>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <section class="row login-form " >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <h2 class="text-center text-dark mt-5">Apply Loan</h2>
+
+                    <div class="card my-3">
+                        <form class="card-body cardbody-color p-lg-2 mx-5"  th:action="@{/user/apply-loan(agentId=${agent.agentId})}" method="post">
+                            <!--                            <h5 class="text-center my-4 py-2 bg-warning rounded" th:text="${message}"></h5>-->
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert" th:if="${message != null}">
+                                <span th:text="${message}"></span>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="mb-3 ">
+                                <input type="text" name="type" class="form-control"
+                                       th:value="|${agent.department} loan|" disabled />
+                                <input type="hidden" name="type" th:value="${agent.department}">
+                            </div>
+                            <div class="mb-3 ">
+                                <!--                <label for="exampleInputPassword1" class="form-label">Password</label>-->
+                                <input type="number" name="amount" class="form-control"
+                                       placeholder="Enter Amount.." required
+                                >
+                            </div>
+                            <div class="mb-3 ">
+                                <input type="number" name="duration" class="form-control"
+                                       placeholder="Enter Loan Duration (In Months).." required
+                                >
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-color px-5 mb-5 w-100 btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

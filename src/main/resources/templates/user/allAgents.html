@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <section>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert" th:if="${message != null}">
+            <span th:text="${message}"></span>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Agent Role</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="agent, i : ${agents}">
+                <th scope="row" th:text="${i.count}"></th>
+                <td th:text="${agent.name}"></td>
+                <td th:text="${agent.email}"></td>
+                <td th:text="${agent.department}"></td>
+                <td>
+                    <th:block th:if="${cibil}">
+                        <a th:href="@{/user/apply(agentId=${agent.agentId})}">
+                            <button type="button" class="btn btn-primary">Apply For Loan</button>
+                        </a>
+                    </th:block>
+                    <th:block th:unless="${cibil}">
+                        <button disabled type="button" class="btn btn-primary">Apply For Loan</button>
+                    </th:block>
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>
