@@ -8,7 +8,6 @@ import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
@@ -21,17 +20,26 @@ import java.util.List;
 @Service
 public class LoanService {
     @Autowired
-    private LoanRepositiory loanRepositiory;
+    private final LoanRepositiory loanRepositiory;
     @Autowired
-    private UserRepositiory userRepositiory;
+    private final UserRepositiory userRepositiory;
     @Autowired
-    private AgentRepositiory agentRepositiory;
+    private final AgentRepositiory agentRepositiory;
     @Autowired
-    private PaymentRepositiory paymentRepositiory;
+    private final PaymentRepositiory paymentRepositiory;
     @Autowired
-    private MappingRepository mappingRepo;
+    private final MappingRepository mappingRepo;
     @Autowired
-    private MailService mailService;
+    private final MailService mailService;
+
+    public LoanService(LoanRepositiory loanRepositiory, UserRepositiory userRepositiory, AgentRepositiory agentRepositiory, PaymentRepositiory paymentRepositiory, MappingRepository mappingRepo, MailService mailService) {
+        this.loanRepositiory = loanRepositiory;
+        this.userRepositiory = userRepositiory;
+        this.agentRepositiory = agentRepositiory;
+        this.paymentRepositiory = paymentRepositiory;
+        this.mappingRepo = mappingRepo;
+        this.mailService = mailService;
+    }
 
     public Employee fetchEmployee(HttpSession session){
         int empId = (Integer)session.getAttribute("userId");
@@ -103,8 +111,7 @@ public class LoanService {
         return loanRepositiory.getLoanById(loadId);
     }
 
-    public boolean updateLoan(Loan loan, int actualLoanId, HttpSession session){
-        String status = getLoanDetail(actualLoanId).getStatus();
+    public boolean updateLoan(Loan loan, int actualLoanId){
         Loan actualLoan = getLoanDetail(actualLoanId);
         if((actualLoan.getStatus()).equals("Pending")){
             actualLoan.setAmount(loan.getAmount());
@@ -136,7 +143,7 @@ public class LoanService {
             return false;
         }
     }
-    public void approveLoan(int loanId) throws ParseException {
+    public void approveLoan(int loanId) {
         Loan loan = getLoanDetail(loanId);
         // add approve date
         loan.setApproveDate(getCurrDate());
@@ -209,17 +216,17 @@ public class LoanService {
         mail.setSubject("Reminder To Pay Loan");
         mail.setMessage("Pay Your "+loan.getType()+" Loan \n Due date is :- "+updatedDate);
 
-//        if(dateDifference.getMonths() < 1){
+        if(dateDifference.getMonths() < 1){
             mailService.sendmail(loan.getEmpId().getEmail(), mail);
             System.out.println("Mail Sent");
             return "sent";
-//        }
-//        return "notSent";
+        }
+        return "notSent";
     }
 
     public Long getTotalAmount(HttpSession session){
         List<Loan> loans = fetchEmployee(session).getAllLoans();
-        Long totalAmount = 0l;
+        long totalAmount = 0L;
         for(Loan i : loans){
             if(i.getStatus().equals("Approved")){
                 totalAmount += Long.parseLong(i.getAmount());
@@ -228,12 +235,12 @@ public class LoanService {
         return totalAmount;
     }
 
-    public void payLoan(String loanId, HttpSession session){
+    public void payLoan(String loanId){
         Loan loan = getLoanDetail(Integer.parseInt(loanId));
-        savePayment(loan, session);
+        savePayment(loan);
     }
 
-    public void savePayment(Loan loan, HttpSession session){
+    public void savePayment(Loan loan){
         Payment payment = new Payment();
         payment.setAmount(loan.getAmount());
         payment.setDate(getCurrDate());

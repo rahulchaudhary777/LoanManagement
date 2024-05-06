@@ -5,10 +5,14 @@
     <title th:text="${title}"></title>
 </head>
 <body>
-    <section>
-        <h1>Index file....</h1>
-        <h2 th:text="${amount}"></h2>
-        <h2 th:text=${cibil}></h2>
+    <section class="index-page">
+        <div class="amount">
+            <p>Total Amount : <span  th:text="${amount}"></span></p>
+        </div>
+        <div class="cibil">
+            <p>Cibil Score : <span  th:text="${cibil}"></span></p>
+        </div>
+
 <!--        <a th:href="@{/user/pay-loan}"><button class="btn btn-success">Pay Loan</button></a>-->
     </section>
 </body>

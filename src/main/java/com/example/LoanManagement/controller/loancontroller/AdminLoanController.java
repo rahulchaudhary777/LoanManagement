@@ -20,9 +20,14 @@ import java.util.List;
 @RequestMapping("/admin")
 public class AdminLoanController {
     @Autowired
-    private LoanService loanService;
+    private final LoanService loanService;
     @Autowired
-    private PaymentService paymentService;
+    private final PaymentService paymentService;
+
+    public AdminLoanController(LoanService loanService, PaymentService paymentService) {
+        this.loanService = loanService;
+        this.paymentService = paymentService;
+    }
 
     @GetMapping("/approve-loan")
     public String approveLoan(HttpSession session, Model model){

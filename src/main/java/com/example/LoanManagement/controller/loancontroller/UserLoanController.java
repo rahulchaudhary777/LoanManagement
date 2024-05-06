@@ -21,13 +21,17 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserLoanController {
     @Autowired
-    private LoanService loanService;
+    private final LoanService loanService;
     @Autowired
-    private EmployeeService employeeService;
+    private final AgentService agentService;
     @Autowired
-    private AgentService agentService;
-    @Autowired
-    private PaymentService paymentService;
+    private final PaymentService paymentService;
+
+    public UserLoanController(LoanService loanService, AgentService agentService, PaymentService paymentService) {
+        this.loanService = loanService;
+        this.agentService = agentService;
+        this.paymentService = paymentService;
+    }
 
     @GetMapping("/apply-loan")
     public String applyLoan(Model model, HttpSession session){
@@ -35,14 +39,13 @@ public class UserLoanController {
         String response = loanService.getCibil(session);
         // can put cibil later
         System.out.println(response);
-        if(response.equals("notFound")){
-            model.addAttribute("message", "Provide your cibil score");
-            return "user/cibil";
-        } else if(response.equals("lowCibil")){
-            model.addAttribute("message", "Sorry, You have a low cibil score");
-        }
-        else if(response.equals("success")){
-            model.addAttribute("cibil", loanService.fetchEmployee(session).getCibilScore());
+        switch (response) {
+            case "notFound" -> {
+                model.addAttribute("message", "Provide your cibil score");
+                return "user/cibil";
+            }
+            case "lowCibil" -> model.addAttribute("message", "Sorry, You have a low cibil score");
+            case "success" -> model.addAttribute("cibil", loanService.fetchEmployee(session).getCibilScore());
         }
         model.addAttribute("agents", agents);
         return "user/allAgents";
@@ -77,8 +80,8 @@ public class UserLoanController {
 
     @PostMapping("/update-loan")
     public RedirectView update(@ModelAttribute Loan loan, @RequestParam("loanId") String actualLoanId,
-                         HttpSession session, RedirectAttributes attribute){
-        boolean res = loanService.updateLoan(loan, Integer.parseInt(actualLoanId), session);
+                         RedirectAttributes attribute){
+        boolean res = loanService.updateLoan(loan, Integer.parseInt(actualLoanId));
         if(res){
             attribute.addFlashAttribute("message", "Updated Successfully");
         }
@@ -102,8 +105,8 @@ public class UserLoanController {
     }
 
     @GetMapping("/pay-loan")
-    public RedirectView payLoan(@RequestParam String loanId, HttpSession session, RedirectAttributes attribute){
-        loanService.payLoan(loanId, session);
+    public RedirectView payLoan(@RequestParam String loanId, RedirectAttributes attribute){
+        loanService.payLoan(loanId);
         attribute.addFlashAttribute("message", "Loan payment successfully");
         return new RedirectView("/user/loan-history");
     }

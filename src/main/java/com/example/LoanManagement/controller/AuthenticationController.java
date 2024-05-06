@@ -18,9 +18,14 @@ import org.springframework.web.servlet.view.RedirectView;
 @Controller
 public class AuthenticationController {
     @Autowired
-    private EmployeeService employeeService;
+    private final EmployeeService employeeService;
     @Autowired
-    private AgentService agentService;
+    private final AgentService agentService;
+
+    public AuthenticationController(EmployeeService employeeService, AgentService agentService) {
+        this.employeeService = employeeService;
+        this.agentService = agentService;
+    }
 
     @GetMapping("/register")
     public String registerUser(Model model){

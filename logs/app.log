@@ -1,32 +1,848 @@
-24-04-27 16:31:34:245 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-24-04-27 16:31:34:297 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 16104 (C:\Users\rahul.gla_spicemoney\Downloads\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Downloads\LoanManagement)
-24-04-27 16:31:34:299 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
-24-04-27 16:31:35:213 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-24-04-27 16:31:35:332 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 103 ms. Found 5 JPA repository interfaces.
-24-04-27 16:31:36:029 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-24-04-27 16:31:36:037 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-24-04-27 16:31:36:039 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-24-04-27 16:31:36:039 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
-24-04-27 16:31:36:118 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-24-04-27 16:31:36:118 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1773 ms
-24-04-27 16:31:36:341 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-24-04-27 16:31:36:417 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-24-04-27 16:31:36:466 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-24-04-27 16:31:36:760 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-24-04-27 16:31:36:791 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-24-04-27 16:31:37:139 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d73e8c4
-24-04-27 16:31:37:141 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-24-04-27 16:31:37:201 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-24-04-27 16:31:38:199 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-24-04-27 16:31:38:263 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-24-04-27 16:31:38:564 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-24-04-27 16:31:39:103 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-24-04-27 16:31:39:546 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-24-04-27 16:31:39:569 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
-24-04-27 16:31:39:579 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 5.639 seconds (process running for 6.305)
-24-04-27 16:32:20:796 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-24-04-27 16:32:20:796 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-24-04-27 16:32:20:796 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
-24-04-27 16:33:07:063 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-24-04-27 16:33:07:065 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-24-04-27 16:33:07:074 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 11:49:47:299 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 11:49:47:353 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 11388 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 11:49:47:354 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 11:49:48:224 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 11:49:48:341 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 104 ms. Found 5 JPA repository interfaces.
+24-05-06 11:49:49:136 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 11:49:49:146 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 11:49:49:149 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 11:49:49:150 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 11:49:49:226 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 11:49:49:226 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1828 ms
+24-05-06 11:49:49:449 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 11:49:49:521 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 11:49:49:568 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 11:49:49:942 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 11:49:49:981 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 11:49:50:479 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10bdfbcc
+24-05-06 11:49:50:480 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 11:49:50:533 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 11:49:51:584 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 11:49:51:644 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 11:49:52:025 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 11:49:52:587 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 11:49:53:068 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 11:49:53:096 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 11:49:53:106 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 6.111 seconds (process running for 6.799)
+24-05-06 11:49:53:177 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 11:49:53:178 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 11:49:53:180 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+24-05-06 12:34:33:230 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 12:34:33:257 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 12:34:33:273 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 12:34:38:125 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 12:34:38:210 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 3228 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 12:34:38:211 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 12:34:39:321 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 12:34:39:413 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 81 ms. Found 5 JPA repository interfaces.
+24-05-06 12:34:40:307 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 12:34:40:319 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 12:34:40:323 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 12:34:40:323 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 12:34:40:425 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 12:34:40:426 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2156 ms
+24-05-06 12:34:40:726 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 12:34:40:800 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 12:34:40:858 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 12:34:41:264 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 12:34:41:296 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 12:34:41:717 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4403bff8
+24-05-06 12:34:41:730 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 12:34:41:796 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 12:34:43:142 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 12:34:43:229 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 12:34:43:606 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 12:34:44:447 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 12:34:45:094 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 12:34:45:141 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 12:34:45:156 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 7.418 seconds (process running for 8.161)
+24-05-06 12:34:45:863 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 12:34:45:863 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 12:34:45:863 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+24-05-06 12:36:36:095 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 12:36:36:097 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 12:36:36:108 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 12:36:38:394 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 12:36:38:467 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 8156 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 12:36:38:468 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 12:36:39:449 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 12:36:39:537 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74 ms. Found 5 JPA repository interfaces.
+24-05-06 12:36:40:384 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 12:36:40:395 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 12:36:40:398 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 12:36:40:399 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 12:36:40:529 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 12:36:40:530 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2009 ms
+24-05-06 12:36:40:796 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 12:36:40:866 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 12:36:40:909 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 12:36:41:244 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 12:36:41:281 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 12:36:41:665 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d73e8c4
+24-05-06 12:36:41:667 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 12:36:41:726 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 12:36:42:876 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 12:36:42:939 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 12:36:43:327 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 12:36:44:066 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 12:36:44:582 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 12:36:44:621 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 12:36:44:633 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 6.632 seconds (process running for 7.35)
+24-05-06 12:36:49:377 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 12:36:49:377 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 12:36:49:378 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+24-05-06 12:39:40:998 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 12:39:41:005 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 12:39:41:022 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 12:39:43:970 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 12:39:44:027 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 11452 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 12:39:44:027 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 12:39:44:973 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 12:39:45:054 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 71 ms. Found 5 JPA repository interfaces.
+24-05-06 12:39:45:895 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 12:39:45:916 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 12:39:45:920 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 12:39:45:920 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 12:39:45:995 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 12:39:45:995 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1914 ms
+24-05-06 12:39:46:244 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 12:39:46:316 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 12:39:46:362 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 12:39:46:714 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 12:39:46:741 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 12:39:47:118 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@131ba005
+24-05-06 12:39:47:120 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 12:39:47:176 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 12:39:48:321 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 12:39:48:387 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 12:39:48:743 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 12:39:49:414 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 12:39:49:934 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 12:39:50:005 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 12:39:50:021 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 6.454 seconds (process running for 7.142)
+24-05-06 12:39:54:848 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 12:39:54:848 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 12:39:54:850 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+24-05-06 12:41:15:805 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 12:41:15:805 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 12:41:15:817 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 12:41:18:784 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 12:41:18:857 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 20472 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 12:41:18:857 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 12:41:19:817 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 12:41:19:923 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 94 ms. Found 5 JPA repository interfaces.
+24-05-06 12:41:20:790 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 12:41:20:801 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 12:41:20:804 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 12:41:20:804 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 12:41:20:888 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 12:41:20:888 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1970 ms
+24-05-06 12:41:21:132 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 12:41:21:204 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 12:41:21:255 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 12:41:21:562 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 12:41:21:598 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 12:41:21:998 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@131ba005
+24-05-06 12:41:22:003 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 12:41:22:058 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 12:41:23:155 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 12:41:23:226 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 12:41:23:590 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 12:41:24:315 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 12:41:24:828 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 12:41:24:905 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 12:41:24:916 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 6.519 seconds (process running for 7.24)
+24-05-06 12:41:32:395 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 12:41:32:395 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 12:41:32:395 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+24-05-06 12:42:55:209 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 12:42:55:212 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 12:42:55:232 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 12:42:58:121 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 12:42:58:197 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 760 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 12:42:58:198 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 12:42:59:164 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 12:42:59:282 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98 ms. Found 5 JPA repository interfaces.
+24-05-06 12:43:00:088 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 12:43:00:100 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 12:43:00:104 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 12:43:00:104 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 12:43:00:184 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 12:43:00:185 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1932 ms
+24-05-06 12:43:00:441 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 12:43:00:517 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 12:43:00:564 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 12:43:00:897 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 12:43:00:934 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 12:43:01:325 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f71e024
+24-05-06 12:43:01:329 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 12:43:01:388 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 12:43:02:514 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 12:43:02:580 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 12:43:02:946 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 12:43:03:696 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 12:43:04:240 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 12:43:04:278 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 12:43:04:291 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 6.597 seconds (process running for 7.28)
+24-05-06 12:43:05:622 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 12:43:05:622 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 12:43:05:625 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+24-05-06 12:46:11:022 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 12:46:11:024 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 12:46:11:033 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 12:46:13:017 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 12:46:13:067 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 22076 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 12:46:13:068 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 12:46:13:749 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 12:46:13:816 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 5 JPA repository interfaces.
+24-05-06 12:46:14:402 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 12:46:14:410 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 12:46:14:413 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 12:46:14:414 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 12:46:14:483 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 12:46:14:483 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1374 ms
+24-05-06 12:46:14:646 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 12:46:14:709 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 12:46:14:748 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 12:46:14:964 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 12:46:14:993 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 12:46:15:283 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a1e912f
+24-05-06 12:46:15:285 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 12:46:15:329 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 12:46:16:232 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 12:46:16:294 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 12:46:16:559 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 12:46:17:025 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 12:46:17:399 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 12:46:17:423 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 12:46:17:431 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 4.69 seconds (process running for 5.302)
+24-05-06 12:46:24:871 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 12:46:24:871 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 12:46:24:887 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+24-05-06 14:01:09:559 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h8m52s403ms111µs800ns).
+24-05-06 14:02:39:023 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:02:39:026 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 14:02:39:037 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 14:02:42:847 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 14:02:42:901 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 22020 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 14:02:42:905 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 14:02:43:752 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 14:02:43:829 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 5 JPA repository interfaces.
+24-05-06 14:02:44:603 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 14:02:44:613 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 14:02:44:617 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 14:02:44:617 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 14:02:44:699 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 14:02:44:699 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1752 ms
+24-05-06 14:02:44:968 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 14:02:45:044 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 14:02:45:089 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 14:02:45:364 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 14:02:45:395 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 14:02:45:689 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2eb6d34a
+24-05-06 14:02:45:691 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 14:02:45:740 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 14:02:46:780 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 14:02:46:832 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:02:47:141 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 14:02:47:709 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 14:02:48:170 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 14:02:48:195 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 14:02:48:206 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 5.655 seconds (process running for 6.247)
+24-05-06 14:02:48:885 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 14:02:48:885 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 14:02:48:887 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+24-05-06 14:03:33:036 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:03:33:036 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 14:03:33:059 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 14:03:35:552 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 14:03:35:620 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 21024 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 14:03:35:620 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 14:03:36:330 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 14:03:36:404 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 5 JPA repository interfaces.
+24-05-06 14:03:37:047 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 14:03:37:047 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 14:03:37:047 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 14:03:37:047 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 14:03:37:113 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 14:03:37:113 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1463 ms
+24-05-06 14:03:37:325 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 14:03:37:401 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 14:03:37:456 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 14:03:37:714 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 14:03:37:727 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 14:03:37:997 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60ed0b9d
+24-05-06 14:03:37:997 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 14:03:38:029 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 14:03:38:982 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 14:03:39:045 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:03:39:331 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 14:03:39:873 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 14:03:40:275 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 14:03:40:309 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 14:03:40:325 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 5.067 seconds (process running for 5.679)
+24-05-06 14:03:41:324 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 14:03:41:324 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 14:03:41:324 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+24-05-06 14:08:22:400 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:08:22:403 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 14:08:22:407 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 14:08:24:575 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 14:08:24:620 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 22512 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 14:08:24:620 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 14:08:25:298 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 14:08:25:359 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56 ms. Found 5 JPA repository interfaces.
+24-05-06 14:08:25:900 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 14:08:25:900 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 14:08:25:900 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 14:08:25:900 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 14:08:25:987 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 14:08:25:987 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1331 ms
+24-05-06 14:08:26:142 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 14:08:26:203 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 14:08:26:235 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 14:08:26:446 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 14:08:26:471 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 14:08:26:729 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@49986178
+24-05-06 14:08:26:730 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 14:08:26:768 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 14:08:27:609 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 14:08:27:660 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:08:27:925 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 14:08:28:373 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 14:08:28:718 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 14:08:28:735 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 14:08:28:743 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 4.445 seconds (process running for 4.957)
+24-05-06 14:08:32:988 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 14:08:32:989 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 14:08:32:989 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+24-05-06 14:09:24:887 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:09:24:890 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 14:09:24:896 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 14:09:26:892 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 14:09:26:943 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 19804 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 14:09:26:943 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 14:09:27:614 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 14:09:27:693 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 5 JPA repository interfaces.
+24-05-06 14:09:28:288 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 14:09:28:298 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 14:09:28:300 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 14:09:28:301 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 14:09:28:361 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 14:09:28:361 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1387 ms
+24-05-06 14:09:28:521 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 14:09:28:592 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 14:09:28:627 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 14:09:28:858 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 14:09:28:883 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 14:09:29:159 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@382d549a
+24-05-06 14:09:29:161 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 14:09:29:200 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 14:09:30:106 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 14:09:30:156 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:09:30:432 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 14:09:31:066 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 14:09:31:456 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 14:09:31:483 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 14:09:31:492 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 4.877 seconds (process running for 5.475)
+24-05-06 14:09:32:672 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 14:09:32:672 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 14:09:32:673 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+24-05-06 14:11:50:072 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:11:50:074 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 14:11:50:078 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 14:11:53:072 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 14:11:53:131 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 8172 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 14:11:53:131 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 14:11:53:853 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 14:11:53:920 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 5 JPA repository interfaces.
+24-05-06 14:11:54:505 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 14:11:54:505 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 14:11:54:520 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 14:11:54:520 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 14:11:54:584 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 14:11:54:584 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1413 ms
+24-05-06 14:11:54:751 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 14:11:54:818 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 14:11:54:851 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 14:11:55:067 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 14:11:55:101 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 14:11:55:348 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f012923
+24-05-06 14:11:55:350 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 14:11:55:384 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 14:11:56:250 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 14:11:56:299 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:11:56:565 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 14:11:57:016 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 14:11:57:466 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 14:11:57:499 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 14:11:57:501 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 4.721 seconds (process running for 5.289)
+24-05-06 14:11:58:298 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 14:11:58:298 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 14:11:58:298 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+24-05-06 14:15:16:212 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:15:16:212 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 14:15:16:225 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 14:15:19:785 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 14:15:19:837 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 22664 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 14:15:19:838 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 14:15:20:646 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 14:15:20:742 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 84 ms. Found 5 JPA repository interfaces.
+24-05-06 14:15:21:432 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 14:15:21:443 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 14:15:21:445 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 14:15:21:445 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 14:15:21:506 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 14:15:21:507 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1628 ms
+24-05-06 14:15:21:727 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 14:15:21:792 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 14:15:21:836 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 14:15:22:099 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 14:15:22:126 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 14:15:22:425 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34beadce
+24-05-06 14:15:22:428 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 14:15:22:470 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 14:15:23:338 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 14:15:23:399 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:15:23:667 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 14:15:24:165 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 14:15:24:541 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 14:15:24:566 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 14:15:24:573 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 5.103 seconds (process running for 5.671)
+24-05-06 14:15:24:687 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 14:15:24:688 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 14:15:24:690 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+24-05-06 14:23:22:160 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:23:22:165 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 14:23:22:177 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 14:23:25:084 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 14:23:25:145 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 1880 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 14:23:25:145 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 14:23:25:808 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 14:23:25:876 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 5 JPA repository interfaces.
+24-05-06 14:23:26:433 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 14:23:26:442 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 14:23:26:444 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 14:23:26:444 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 14:23:26:522 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 14:23:26:523 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1334 ms
+24-05-06 14:23:26:688 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 14:23:26:745 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 14:23:26:781 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 14:23:26:997 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 14:23:27:022 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 14:23:27:276 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f305f34
+24-05-06 14:23:27:278 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 14:23:27:319 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 14:23:28:130 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 14:23:28:180 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:23:28:440 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 14:23:28:893 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 14:23:29:286 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 14:23:29:315 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 14:23:29:325 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 4.513 seconds (process running for 5.03)
+24-05-06 14:23:34:418 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 14:23:34:419 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 14:23:34:420 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+24-05-06 14:25:16:916 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:25:16:918 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 14:25:16:935 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 14:25:20:925 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 14:25:20:996 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 15900 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 14:25:20:997 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 14:25:21:282 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 14:25:21:366 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 10388 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 14:25:21:368 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 14:25:22:428 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 14:25:22:565 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 124 ms. Found 5 JPA repository interfaces.
+24-05-06 14:25:22:923 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 14:25:23:033 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 97 ms. Found 5 JPA repository interfaces.
+24-05-06 14:25:23:930 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 14:25:23:941 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 14:25:23:945 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 14:25:23:946 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 14:25:24:073 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 14:25:24:074 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3023 ms
+24-05-06 14:25:24:205 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 14:25:24:220 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 14:25:24:224 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 14:25:24:225 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 14:25:24:340 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 14:25:24:341 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2901 ms
+24-05-06 14:25:24:372 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 14:25:24:596 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 14:25:24:724 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 14:25:24:794 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 14:25:24:913 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 14:25:24:955 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 14:25:25:199 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 14:25:25:243 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 14:25:25:314 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 14:25:25:368 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 14:25:25:952 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1716c037
+24-05-06 14:25:25:955 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 14:25:26:004 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 14:25:26:006 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2036f83
+24-05-06 14:25:26:009 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 14:25:26:052 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 14:25:27:333 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 14:25:27:339 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 14:25:27:399 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:25:27:410 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:25:27:966 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 14:25:27:977 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 14:25:28:873 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 14:25:28:946 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 14:25:29:595 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 14:25:29:658 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 14:25:29:680 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 8.832 seconds (process running for 9.557)
+24-05-06 14:25:29:768 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 14:25:29:779 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+24-05-06 14:25:29:781 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:25:29:784 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 14:25:29:798 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 14:25:29:824 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+24-05-06 14:25:29:859 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+24-05-06 14:25:35:958 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 14:25:35:958 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 14:25:35:959 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+24-05-06 14:27:12:048 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:27:12:050 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 14:27:12:054 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 14:27:13:951 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 14:27:14:002 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 600 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 14:27:14:002 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 14:27:14:757 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 14:27:14:853 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 80 ms. Found 5 JPA repository interfaces.
+24-05-06 14:27:15:490 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 14:27:15:497 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 14:27:15:499 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 14:27:15:499 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 14:27:15:561 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 14:27:15:562 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1513 ms
+24-05-06 14:27:15:762 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 14:27:15:816 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 14:27:15:852 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 14:27:16:077 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 14:27:16:105 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 14:27:16:374 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c07e830
+24-05-06 14:27:16:376 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 14:27:16:416 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 14:27:17:304 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 14:27:17:367 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:27:17:641 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 14:27:18:165 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 14:27:18:843 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 14:27:18:878 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 14:27:18:888 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 5.222 seconds (process running for 5.79)
+24-05-06 14:27:20:150 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 14:27:20:150 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 14:27:20:151 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+24-05-06 14:28:53:344 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:28:53:347 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 14:28:53:350 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 14:28:56:492 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 14:28:56:550 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 6088 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 14:28:56:551 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 14:28:57:306 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 14:28:57:374 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 5 JPA repository interfaces.
+24-05-06 14:28:57:955 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 14:28:57:967 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 14:28:57:971 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 14:28:57:971 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 14:28:58:040 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 14:28:58:041 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1448 ms
+24-05-06 14:28:58:238 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 14:28:58:295 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 14:28:58:329 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 14:28:58:560 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 14:28:58:583 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 14:28:58:904 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@261275ae
+24-05-06 14:28:58:906 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 14:28:58:950 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 14:28:59:828 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 14:28:59:886 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:29:00:237 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 14:29:00:742 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 14:29:01:150 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 14:29:01:171 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 14:29:01:180 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 4.984 seconds (process running for 5.581)
+24-05-06 14:29:01:402 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 14:29:01:402 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 14:29:01:403 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+24-05-06 14:30:54:149 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:30:54:152 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 14:30:54:160 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 14:30:56:066 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 14:30:56:116 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 21816 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 14:30:56:116 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 14:30:56:811 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 14:30:56:877 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 5 JPA repository interfaces.
+24-05-06 14:30:57:478 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 14:30:57:488 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 14:30:57:490 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 14:30:57:490 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 14:30:57:554 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 14:30:57:555 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1399 ms
+24-05-06 14:30:57:753 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 14:30:57:804 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 14:30:57:837 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 14:30:58:060 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 14:30:58:087 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 14:30:58:337 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@382d549a
+24-05-06 14:30:58:338 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 14:30:58:381 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 14:30:59:193 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 14:30:59:246 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:30:59:504 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 14:30:59:932 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 14:31:00:322 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 14:31:00:346 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 14:31:00:354 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 4.559 seconds (process running for 5.194)
+24-05-06 14:31:03:452 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 14:31:03:452 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 14:31:03:454 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+24-05-06 14:32:05:483 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:32:05:486 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 14:32:05:495 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 14:32:07:545 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 14:32:07:599 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 21736 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 14:32:07:602 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 14:32:08:315 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 14:32:08:395 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 70 ms. Found 5 JPA repository interfaces.
+24-05-06 14:32:09:054 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 14:32:09:054 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 14:32:09:069 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 14:32:09:069 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 14:32:09:133 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 14:32:09:133 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1489 ms
+24-05-06 14:32:09:291 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 14:32:09:339 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 14:32:09:371 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 14:32:09:576 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 14:32:09:606 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 14:32:09:843 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10bdfbcc
+24-05-06 14:32:09:843 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 14:32:09:891 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 14:32:10:848 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 14:32:10:898 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:32:11:214 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 14:32:11:706 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 14:32:12:085 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 14:32:12:101 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 14:32:12:117 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 4.888 seconds (process running for 5.582)
+24-05-06 14:32:12:164 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 14:32:12:179 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 14:32:12:179 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+24-05-06 14:33:23:235 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:33:23:237 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 14:33:23:244 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 14:33:25:220 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 14:33:25:271 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 22412 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 14:33:25:272 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 14:33:26:007 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 14:33:26:087 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 5 JPA repository interfaces.
+24-05-06 14:33:26:700 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 14:33:26:700 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 14:33:26:700 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 14:33:26:700 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 14:33:26:779 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 14:33:26:779 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1459 ms
+24-05-06 14:33:26:937 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 14:33:27:017 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 14:33:27:065 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 14:33:27:287 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 14:33:27:303 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 14:33:27:571 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f305f34
+24-05-06 14:33:27:586 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 14:33:27:633 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 14:33:28:521 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 14:33:28:572 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:33:28:873 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 14:33:29:349 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 14:33:29:762 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 14:33:29:777 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 14:33:29:792 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 4.857 seconds (process running for 5.529)
+24-05-06 14:33:29:857 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 14:33:29:857 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 14:33:29:863 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+24-05-06 14:34:31:010 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:34:31:013 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 14:34:31:019 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 14:34:32:847 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 14:34:32:896 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 2940 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 14:34:32:896 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 14:34:33:586 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 14:34:33:661 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56 ms. Found 5 JPA repository interfaces.
+24-05-06 14:34:34:238 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 14:34:34:253 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 14:34:34:253 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 14:34:34:253 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 14:34:34:301 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 14:34:34:301 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1359 ms
+24-05-06 14:34:34:461 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 14:34:34:523 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 14:34:34:555 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 14:34:34:788 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 14:34:34:811 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 14:34:35:112 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a1e912f
+24-05-06 14:34:35:113 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 14:34:35:150 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 14:34:35:959 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 14:34:36:011 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:34:36:287 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 14:34:36:798 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 14:34:37:189 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 14:34:37:213 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 14:34:37:223 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 4.663 seconds (process running for 5.226)
+24-05-06 14:34:42:371 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 14:34:42:371 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 14:34:42:373 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+24-05-06 14:35:06:959 [http-nio-8080-exec-4] INFO  o.h.c.s.AbstractPersistentCollection - HHH000496: Detaching an uninitialized collection with queued operations from a session: [com.example.LoanManagement.dao.entity.Agent.allLoans#501]
+24-05-06 14:35:06:959 [http-nio-8080-exec-4] INFO  o.h.c.s.AbstractPersistentCollection - HHH000496: Detaching an uninitialized collection with queued operations from a session: [com.example.LoanManagement.dao.entity.Employee.allLoans#101]
+24-05-06 14:36:15:924 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:36:15:926 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 14:36:15:932 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 14:36:17:805 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 14:36:17:858 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 21216 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 14:36:17:860 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 14:36:18:543 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 14:36:18:609 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57 ms. Found 5 JPA repository interfaces.
+24-05-06 14:36:19:203 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 14:36:19:212 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 14:36:19:214 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 14:36:19:214 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 14:36:19:279 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 14:36:19:279 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1381 ms
+24-05-06 14:36:19:458 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 14:36:19:512 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 14:36:19:543 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 14:36:19:751 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 14:36:19:774 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 14:36:20:039 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4403bff8
+24-05-06 14:36:20:041 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 14:36:20:086 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 14:36:21:003 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 14:36:21:054 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:36:21:352 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 14:36:21:844 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 14:36:22:310 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 14:36:22:333 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 14:36:22:343 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 4.816 seconds (process running for 5.376)
+24-05-06 14:36:27:024 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 14:36:27:025 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 14:36:27:026 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+24-05-06 14:37:07:363 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:37:07:364 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 14:37:07:371 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 14:37:09:217 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 14:37:09:268 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 13756 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 14:37:09:284 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 14:37:09:977 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 14:37:10:040 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 5 JPA repository interfaces.
+24-05-06 14:37:10:618 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 14:37:10:628 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 14:37:10:628 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 14:37:10:628 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 14:37:10:691 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 14:37:10:691 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1366 ms
+24-05-06 14:37:10:866 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 14:37:10:922 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 14:37:10:957 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 14:37:11:189 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 14:37:11:215 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 14:37:11:495 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ce2e079
+24-05-06 14:37:11:496 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 14:37:11:535 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 14:37:12:356 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 14:37:12:407 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:37:12:708 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 14:37:13:224 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 14:37:13:601 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 14:37:13:636 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 14:37:13:643 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 4.709 seconds (process running for 5.256)
+24-05-06 14:37:17:980 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 14:37:17:980 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 14:37:17:981 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+24-05-06 14:38:20:136 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:38:20:140 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 14:38:20:146 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 14:38:21:976 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 14:38:22:029 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 22820 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 14:38:22:031 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 14:38:22:758 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 14:38:22:829 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 5 JPA repository interfaces.
+24-05-06 14:38:23:468 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 14:38:23:479 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 14:38:23:482 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 14:38:23:483 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 14:38:23:557 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 14:38:23:557 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1485 ms
+24-05-06 14:38:23:741 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 14:38:23:800 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 14:38:23:843 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 14:38:24:066 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 14:38:24:093 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 14:38:24:407 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1edf71d9
+24-05-06 14:38:24:408 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 14:38:24:450 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 14:38:25:297 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 14:38:25:356 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:38:25:668 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 14:38:26:154 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 14:38:26:550 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 14:38:26:572 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 14:38:26:580 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 4.887 seconds (process running for 5.468)
+24-05-06 14:38:26:724 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 14:38:26:724 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 14:38:26:725 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+24-05-06 14:39:20:531 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 14:39:20:534 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 14:39:20:539 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+24-05-06 15:47:24:902 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+24-05-06 15:47:24:949 [main] INFO  c.e.L.LoanManagementApplication - Starting LoanManagementApplication using Java 17.0.10 with PID 23992 (C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement\target\classes started by rahul.gla_spicemoney in C:\Users\rahul.gla_spicemoney\Desktop\Springboot\LoanManagement)
+24-05-06 15:47:24:965 [main] INFO  c.e.L.LoanManagementApplication - No active profile set, falling back to 1 default profile: "default"
+24-05-06 15:47:25:673 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-05-06 15:47:25:731 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57 ms. Found 5 JPA repository interfaces.
+24-05-06 15:47:26:351 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+24-05-06 15:47:26:360 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+24-05-06 15:47:26:363 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+24-05-06 15:47:26:363 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+24-05-06 15:47:26:494 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+24-05-06 15:47:26:494 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1495 ms
+24-05-06 15:47:26:691 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-05-06 15:47:26:749 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+24-05-06 15:47:26:781 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+24-05-06 15:47:27:009 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-05-06 15:47:27:040 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+24-05-06 15:47:27:360 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34beadce
+24-05-06 15:47:27:397 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+24-05-06 15:47:27:450 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-05-06 15:47:28:374 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-05-06 15:47:28:443 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 15:47:28:717 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+24-05-06 15:47:29:300 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-05-06 15:47:29:718 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+24-05-06 15:47:29:742 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+24-05-06 15:47:29:750 [main] INFO  c.e.L.LoanManagementApplication - Started LoanManagementApplication in 5.141 seconds (process running for 5.694)
+24-05-06 15:47:35:827 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-05-06 15:47:35:828 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+24-05-06 15:47:35:830 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+24-05-06 15:57:58:566 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-06 15:57:58:569 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+24-05-06 15:57:58:583 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

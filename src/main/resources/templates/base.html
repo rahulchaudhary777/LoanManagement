@@ -6,51 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
-    <link rel="stylesheet" th:href="@{/css/style.css}">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script th:src="@{/js/style.js}"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!--    <script type="text/c" href="/style.css"></script>-->
 
     <title th:text="${title}"></title>
 </head>
 <body class="w-100 h-100">
-<nav class="navbar navbar-expand-lg " style="background-color:#9195F6">
+<nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#" style="color:white;" th:if="${session.username}" th:text="|Hello, ${session.username}|"></a>
-        <a class="navbar-brand" href="#" style="color:white;" th:unless="${session.username}">Hello, User</a>
+        <a class="navbar-brand" href="#">
+            <span th:if="${session.username}" th:text="|Hello, ${session.username}|">Hello, User</span>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 <!--                <li class="nav-item" >-->
-<!--                    <a class="nav-link" th:href="@{/user/register}" style="color:white;">Add User</a>-->
+<!--                    <a class="nav-link" th:href="@{/user/register}">Add User</a>-->
 <!--                </li>-->
                 <li class="nav-item" >
-                    <a class="nav-link active" aria-current="page"
+                    <a class="nav-link route" aria-current="page"
                        th:href="${session.role == 'USER' ? '/user/index' : '/admin/index'}"
-                       style="color:white;">Home</a>
+                    >Home</a>
                 </li>
                 <li class="nav-item" >
-                    <a class="nav-link" th:if="${session.role == 'USER'}" th:href="@{/user/apply-loan}"
-                       style="color:white;">Apply Loan</a>
-                    <a class="nav-link" th:unless="${session.role == 'USER'}" th:href="@{/admin/approve-loan}"
-                       style="color:white;">Approve Loan</a>
+                    <a class="nav-link route" th:if="${session.role == 'USER'}" th:href="@{/user/apply-loan}"
+                    >Apply Loan</a>
+                    <a class="nav-link route" th:unless="${session.role == 'USER'}" th:href="@{/admin/approve-loan}"
+                    >Approve Loan</a>
                 </li>
                 <li class="nav-item" >
-                    <a class="nav-link" th:href="${session.role == 'USER' ? '/user/loan-history' : '/admin/loan-history'}" style="color:white;">Loan History</a>
+                    <a class="nav-link route" th:href="${session.role == 'USER' ? '/user/loan-history' : '/admin/loan-history'}">Loan History</a>
                 </li>
                 <li class="nav-item" >
-                    <a class="nav-link" th:href="${session.role == 'USER' ? '/user/payments' : '/admin/payments'}" style="color:white;">Payments</a>
+                    <a class="nav-link route" th:href="${session.role == 'USER' ? '/user/payments' : '/admin/payments'}">Payments</a>
                 </li>
                 <li class="nav-item" th:if="${session.username}">
-                    <a class="nav-link active" aria-current="page" th:href="@{/logout}" style="color:white;">Logout</a>
+                    <a class="nav-link route" aria-current="page" th:href="@{/logout}">Logout</a>
                 </li>
                 <li class="nav-item" th:unless="${session.username}">
-                    <a class="nav-link" th:href="@{/login}" style="color:white;">Login</a>
+                    <a class="nav-link route" th:href="@{/login}">Login</a>
                 </li>
             </ul>
         </div>
@@ -59,12 +58,6 @@
 <div th:replace="${content}"></div>
 
 
-<script type="text/javascript">
-<!--    $(".alert").alert('close');-->
-    function toggleAdminOptions(show) {
-        var adminOptions = document.getElementById("adminOptions");
-        adminOptions.style.display = show ? "block" : "none";
-    }
-</script>
+<script type="text/javascript" src="/style.js"></script>
 </body>
 </html>
