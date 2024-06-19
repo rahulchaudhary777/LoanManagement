@@ -1,4 +1,4 @@
-package com.example.LoanManagement.dao;
+package com.example.LoanManagement.Model;
 
 import jakarta.persistence.Entity;
 import jakarta.validation.constraints.*;

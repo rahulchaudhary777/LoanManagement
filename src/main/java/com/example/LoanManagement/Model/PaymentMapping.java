@@ -1,4 +1,4 @@
-package com.example.LoanManagement.dao.entity;
+package com.example.LoanManagement.Model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

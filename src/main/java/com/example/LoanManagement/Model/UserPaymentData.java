@@ -1,6 +1,6 @@
-package com.example.LoanManagement.dao;
+package com.example.LoanManagement.Model;
 
-import com.example.LoanManagement.dao.entity.Payment;
+import com.example.LoanManagement.Model.Payment;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,8 +1,8 @@
 package com.example.LoanManagement.controller;
 
-import com.example.LoanManagement.dao.RegisterForm;
-import com.example.LoanManagement.dao.entity.Agent;
-import com.example.LoanManagement.dao.entity.Employee;
+import com.example.LoanManagement.Model.RegisterForm;
+import com.example.LoanManagement.Model.Agent;
+import com.example.LoanManagement.Model.Employee;
 import com.example.LoanManagement.service.AgentService;
 import com.example.LoanManagement.service.EmployeeService;
 import jakarta.servlet.http.HttpSession;
@@ -17,11 +17,10 @@ import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
 public class AuthenticationController {
-    @Autowired
     private final EmployeeService employeeService;
-    @Autowired
     private final AgentService agentService;
 
+    @Autowired
     public AuthenticationController(EmployeeService employeeService, AgentService agentService) {
         this.employeeService = employeeService;
         this.agentService = agentService;

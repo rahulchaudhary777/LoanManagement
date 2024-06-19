@@ -1,6 +1,7 @@
 package com.example.LoanManagement.controller;
 
 import com.example.LoanManagement.service.LoanService;
+import com.example.LoanManagement.service.LoanServiceImpl;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,8 +11,12 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 @RequestMapping("/user")
 public class UserController {
+    private final LoanService loanService;
     @Autowired
-    private LoanService loanService;
+    public UserController(LoanService loanService) {
+        this.loanService = loanService;
+    }
+
     @GetMapping("/index")
     public String home(Model model, HttpSession session){
         Long totalAmount = loanService.getTotalAmount(session);

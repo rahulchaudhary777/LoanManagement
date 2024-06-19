@@ -1,6 +1,6 @@
-package com.example.LoanManagement.dao.repositiory;
+package com.example.LoanManagement.dao;
 
-import com.example.LoanManagement.dao.entity.Employee;
+import com.example.LoanManagement.Model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

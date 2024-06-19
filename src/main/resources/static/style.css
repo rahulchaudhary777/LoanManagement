@@ -42,7 +42,7 @@
 }
 
 .amount:hover, .cibil:hover{
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .card-registration .select-input.form-control[readonly]:not([disabled]) {

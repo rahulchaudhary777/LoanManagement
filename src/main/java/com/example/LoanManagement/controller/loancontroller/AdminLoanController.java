@@ -1,8 +1,8 @@
 package com.example.LoanManagement.controller.loancontroller;
 
-import com.example.LoanManagement.dao.UserPaymentData;
-import com.example.LoanManagement.dao.entity.Agent;
-import com.example.LoanManagement.dao.entity.Loan;
+import com.example.LoanManagement.Model.UserPaymentData;
+import com.example.LoanManagement.Model.Agent;
+import com.example.LoanManagement.Model.Loan;
 import com.example.LoanManagement.service.LoanService;
 import com.example.LoanManagement.service.PaymentService;
 import jakarta.servlet.http.HttpSession;
@@ -19,11 +19,9 @@ import java.util.List;
 @Controller
 @RequestMapping("/admin")
 public class AdminLoanController {
-    @Autowired
     private final LoanService loanService;
-    @Autowired
     private final PaymentService paymentService;
-
+    @Autowired
     public AdminLoanController(LoanService loanService, PaymentService paymentService) {
         this.loanService = loanService;
         this.paymentService = paymentService;
